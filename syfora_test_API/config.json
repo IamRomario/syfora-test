@@ -1,0 +1,7 @@
+{
+  "ApiService": {
+    "Online": false,
+    "Host": "http://localhost:5000/",
+    "OfflinePath": "H:\\Работа\\TestTasks\\Syfora\\syfora_test_front\\bin\\Debug\\net8.0-windows\\users.xml"
+  }
+}

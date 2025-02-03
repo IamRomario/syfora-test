@@ -1,0 +1,55 @@
+﻿<Window x:Class="syfora_test_front.Views.CreateChangeUserView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:syfora_test_front.Views"
+        xmlns:converters="clr-namespace:syfora_test_front.Converters"
+        mc:Ignorable="d"
+        Title="User" Height="250" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Background="{DynamicResource Primary_Background}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <converters:BoolToVisibilityConverter x:Key="boolToVisConvert"/>
+            <converters:BoolToVisibilityInvertConverter x:Key="boolToVisInvertConvert"/>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/syfora_test_front;component/Styles/StylesMain.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Margin="10" MaxWidth="250">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <Label Content="Логин" HorizontalContentAlignment="Center"/>
+            <TextBox Text="{Binding NewUser.Login,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <Label Content="Фамилия" HorizontalContentAlignment="Center"/>
+            <TextBox Text="{Binding NewUser.FirstName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2">
+            <Label Content="Отчество" HorizontalContentAlignment="Center"/>
+            <TextBox Text="{Binding NewUser.LastName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"/>
+        </StackPanel>        
+        
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">            
+            <Button Content="Отмена" IsCancel="True"
+                    Width="55" Height="25" Margin="5"/>
+            <Button Content="Изменить" Command="{Binding UpdateUser}" CommandParameter="{Binding NewUser}"
+                    Visibility="{Binding IsNew, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay,Converter={StaticResource boolToVisInvertConvert}}"
+                    Width="55" Height="25" Margin="5"/>
+            <Button Content="Создать" Command="{Binding CreateUser}" CommandParameter="{Binding NewUser}"
+                    Visibility="{Binding IsNew, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay,Converter={StaticResource boolToVisConvert}}"
+                    Width="55" Height="25" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "syfora_test_WebServer", "syfora_test_WebServer.csproj", "{17160660-E03A-40D4-94F9-F8701C24B163}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "syfora_test_DB", "..\syfora_test_DB\syfora_test_DB.csproj", "{279C0A16-FFA3-48B8-94D6-3F38E79BE737}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17160660-E03A-40D4-94F9-F8701C24B163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17160660-E03A-40D4-94F9-F8701C24B163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17160660-E03A-40D4-94F9-F8701C24B163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17160660-E03A-40D4-94F9-F8701C24B163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{279C0A16-FFA3-48B8-94D6-3F38E79BE737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{279C0A16-FFA3-48B8-94D6-3F38E79BE737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{279C0A16-FFA3-48B8-94D6-3F38E79BE737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{279C0A16-FFA3-48B8-94D6-3F38E79BE737}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BD014DD-F143-4D4F-AF2E-5B848205773B}
+	EndGlobalSection
+EndGlobal
